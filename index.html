@@ -922,6 +922,7 @@ textarea.inp{height:auto;min-height:64px;padding:8px 10px;resize:vertical}
 .photo .ph-flag{position:absolute;right:8px;bottom:8px;border:0;border-radius:999px;padding:4px 10px;font:500 11px var(--f-body);background:rgba(10,26,39,.62);color:#fff;cursor:pointer;backdrop-filter:blur(4px)}
 .aboutsec{display:grid;gap:4px;margin:10px 0}
 .aboutsec p{margin:0;line-height:1.5}
+.tiles-dark .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.9) contrast(.85) saturate(.55)}
 .aviso{display:grid;gap:10px}
 .aviso p{margin:0;line-height:1.5;max-width:60ch}
 .aviso .cita{border-left:3px solid var(--accent);padding:4px 0 4px 12px;font-style:italic;color:var(--muted)}
@@ -1042,6 +1043,12 @@ function makeIcon(o,sel){return L.divIcon({className:'pin'+(sel?' sel':''),html:
 
 /* ---------- map ---------- */
 let map,cluster,basemap={},radiusLayer,tripLine,tileLayer=null,tripLayer;
+// Street tiles. CARTO needs a free key since 25 Sep 2026 (carto.com/basemaps/apikey); without one, OpenStreetMap's own tiles are used.
+const CARTO_KEY='';
+function tileSrc(dark){
+  if(CARTO_KEY)return {url:`https://basemaps.cartocdn.com/rastertiles/${dark?'dark_all':'light_all'}/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`,opt:{maxZoom:19,attribution:'© OpenStreetMap © CARTO'},filter:false};
+  return {url:'https://tile.openstreetmap.org/{z}/{x}/{y}.png',opt:{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'},filter:dark};
+}
 function initMap(bm){
   map=L.map('map',{zoomControl:false,minZoom:3,maxZoom:18,worldCopyJump:false,attributionControl:true,preferCanvas:true}).fitBounds([[36,-10],[62,30]]);
   L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
@@ -1060,12 +1067,14 @@ function initMap(bm){
   map.on('click',e=>{if(pickMode){setRadiusCenter([e.latlng.lat,e.latlng.lng],'Punto del mapa');pickMode=false;$('#map').style.cursor='';openTab('filters')}});
   updateLabels();
   // Real street tiles when the host allows them (e.g. the installable version); vector base otherwise.
-  const probe=new Image();probe.onload=()=>enableTiles();probe.src='https://a.basemaps.cartocdn.com/light_all/0/0/0.png?'+Date.now();
+  const probe=new Image();probe.onload=()=>enableTiles();probe.src=tileSrc(false).url.replace('{z}/{x}/{y}{r}','0/0/0').replace('{z}/{x}/{y}','0/0/0');
 }
 function isDark(){const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
 function enableTiles(){
   if(tileLayer)map.removeLayer(tileLayer);
-  tileLayer=L.tileLayer(`https://{s}.basemaps.cartocdn.com/${isDark()?'dark_all':'light_all'}/{z}/{x}/{y}{r}.png`,{subdomains:'abcd',maxZoom:19,attribution:'© OpenStreetMap © CARTO'}).addTo(map);
+  const src=tileSrc(isDark());
+  tileLayer=L.tileLayer(src.url,src.opt).addTo(map);
+  map.getContainer().classList.toggle('tiles-dark',src.filter);
   tileLayer.bringToBack();basemap.tiles=true;styleBase();
 }
 function styleBase(){
@@ -1599,7 +1608,7 @@ function aboutDialog(){
     <div class="aboutsec"><div class="lbl">Una advertencia</div><p>Si para ti el hallazgo inesperado forma parte de la arquitectura, esta app puede estropearte una parte de la sorpresa. <a href="#" id="dlg-aviso" style="color:var(--accent)">Leer la advertencia completa</a></p></div>
     <div class="aboutsec"><div class="lbl">Tus datos</div><p>Tus viajes, listas, rutas y notas se guardan <b>solo en tu dispositivo</b>. No hay cuentas, ni publicidad, ni seguimiento. Usa «Exportar viajes» para hacer una copia o pasarlos a otro dispositivo.</p></div>
     <div class="aboutsec"><div class="lbl">Fotos</div><p>Todas las fotos tienen licencia libre (Creative Commons o dominio público) y proceden de Wikimedia Commons; el autor y la licencia aparecen bajo cada foto. Si una foto automática no corresponde a la obra, pulsa «¿No es esta obra?».</p></div>
-    <div class="aboutsec"><div class="lbl">Mapa</div><p>Cartografía base de Natural Earth y, con conexión, mapas de © OpenStreetMap y © CARTO.</p></div>
+    <div class="aboutsec"><div class="lbl">Mapa</div><p>Cartografía base de Natural Earth y, con conexión, mapas de calles de © OpenStreetMap.</p></div>
     <div class="aboutsec"><div class="lbl">Textos</div><p>Fichas redactadas para Garmintectura. Los datos marcados «por verificar» pueden contener errores.</p></div>
     <div class="row" style="justify-content:space-between;margin-top:12px">${window.claude||isStandalone()?'<span></span>':'<button class="btn" id="dlg-inst">Instalar la app</button>'}<button class="btn primary" id="dlg-ok">Cerrar</button></div>`,
     ()=>{$('#dlg-ok').onclick=closeDialog;const i=$('#dlg-inst');if(i)i.onclick=()=>{closeDialog();setTimeout(installHelp,50)};$('#dlg-aviso').onclick=e=>{e.preventDefault();closeDialog();setTimeout(()=>avisoDialog(false),50)}});
