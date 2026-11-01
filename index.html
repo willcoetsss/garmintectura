@@ -730,16 +730,17 @@ button{cursor:pointer}
 .body{position:relative;display:grid;grid-template-columns:minmax(0,1fr);min-height:0;min-width:0}
 #map{position:absolute;inset:0;background:var(--water);z-index:1}
 .leaflet-container{background:var(--water);font-family:var(--f-body)}
-.leaflet-control-scale-line{background:color-mix(in srgb,var(--panel) 80%,transparent);border-color:var(--ink);color:var(--ink);font:500 10px var(--f-mono)}
+.leaflet-control-scale-line{background:color-mix(in srgb,var(--panel) 80%,transparent);border-color:var(--ink);color:var(--ink);font:500 10px var(--f-mono);text-shadow:none}
 .leaflet-control-attribution{background:color-mix(in srgb,var(--panel) 80%,transparent)!important;color:var(--muted)!important;font-size:10px}
 .leaflet-control-attribution a{color:var(--muted)!important}
 .city-lbl{font:600 11px var(--f-body);color:var(--muted);white-space:nowrap;text-shadow:0 0 3px var(--land),0 0 3px var(--land);pointer-events:none;transform:translate(6px,-7px)}
 .city-lbl.cap{color:var(--ink);font-weight:700;letter-spacing:.02em;text-transform:uppercase;font-size:10.5px}
 .city-dot{width:4px;height:4px;border-radius:50%;background:var(--muted)}
-.pin{width:22px;height:22px}
+.pin{width:44px;height:44px;display:grid;place-items:center;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .pin svg{display:block;overflow:visible}
 .pin.sel svg{transform:scale(1.35);filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
 .cl{display:grid;place-items:center;border-radius:50%;background:var(--ink);color:var(--panel);font:600 12px var(--f-mono);border:3px solid color-mix(in srgb,var(--ink) 25%,transparent);background-clip:padding-box}
+.tripwrap{display:grid;place-items:center;touch-action:manipulation}
 .tripnum{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;font:700 12px var(--f-mono);border:2px solid var(--panel);box-shadow:0 1px 4px rgba(0,0,0,.3)}
 .mapctl{position:absolute;z-index:500;right:max(12px,env(safe-area-inset-right,0px));top:12px;display:flex;flex-direction:column;gap:8px}
 .mapctl .iconbtn{box-shadow:var(--shadow)}
@@ -1039,7 +1040,15 @@ function pinSVG(o,opts={}){
   else body=`<circle cx="11" cy="11" r="7.5" fill="${bg}" stroke="${c}" stroke-width="2.6" stroke-dasharray="3 2.2"/>`;
   return `<svg width="22" height="22" viewBox="0 0 22 22">${body}</svg>`;
 }
-function makeIcon(o,sel){return L.divIcon({className:'pin'+(sel?' sel':''),html:pinSVG(o),iconSize:[22,22],iconAnchor:[11,11]})}
+// The pin is drawn at 22 px but its touch target is 44 px, the size Apple and Google recommend for fingers.
+function nearestPin(pt,tol){
+  if(!map)return null;let best=null,bd=tol;const b=map.getBounds();
+  for(const o of S.view){const m=S.markers.get(o.id);if(!m)continue;const ll=m.getLatLng();if(!b.contains(ll))continue;
+    if(!S.mapTrip&&cluster.getVisibleParent(m)!==m)continue;
+    const d=map.latLngToContainerPoint(ll).distanceTo(pt);if(d<bd){bd=d;best=o.id}}
+  return best;
+}
+function makeIcon(o,sel){return L.divIcon({className:'pin'+(sel?' sel':''),html:pinSVG(o),iconSize:[44,44],iconAnchor:[22,22]})}
 
 /* ---------- map ---------- */
 let map,cluster,basemap={},radiusLayer,tripLine,tileLayer=null,tripLayer;
@@ -1064,7 +1073,9 @@ function initMap(bm){
   map.addLayer(cluster);
   tripLayer=L.layerGroup().addTo(map);
   map.on('zoomend moveend',updateLabels);
-  map.on('click',e=>{if(pickMode){setRadiusCenter([e.latlng.lat,e.latlng.lng],'Punto del mapa');pickMode=false;$('#map').style.cursor='';openTab('filters')}});
+  map.on('click',e=>{if(pickMode){setRadiusCenter([e.latlng.lat,e.latlng.lng],'Punto del mapa');pickMode=false;$('#map').style.cursor='';openTab('filters');return}
+    // A tap that misses every pin still opens the nearest visible work within a finger's width.
+    const hit=nearestPin(e.containerPoint,36);if(hit)select(hit,false)});
   updateLabels();
   // Real street tiles when the host allows them (e.g. the installable version); vector base otherwise.
   const probe=new Image();probe.onload=()=>enableTiles();probe.src=tileSrc(false).url.replace('{z}/{x}/{y}{r}','0/0/0').replace('{z}/{x}/{y}','0/0/0');
@@ -1511,7 +1522,7 @@ function renderTripMap(){
   const segs={};
   t.items.forEach((it,ix)=>{const o=S.byId.get(it.o);if(!o)return;const g=useDays?(it.day||1):0;if(day&&g!==day)return;(segs[g]=segs[g]||[]).push([o.lat,o.lon]);
     const bg=it.v?css('--c-par'):(useDays?dayColor(g):color(o));
-    L.marker([o.lat,o.lon],{icon:L.divIcon({className:'',html:`<div class="tripnum" style="background:${bg};color:#fff">${it.v?'✓':ix+1}</div>`,iconSize:[26,26],iconAnchor:[13,13]})}).on('click',()=>select(o.id,false)).addTo(tripLayer)});
+    L.marker([o.lat,o.lon],{icon:L.divIcon({className:'tripwrap',html:`<div class="tripnum" style="background:${bg};color:#fff">${it.v?'✓':ix+1}</div>`,iconSize:[44,44],iconAnchor:[22,22]})}).on('click',()=>select(o.id,false)).addTo(tripLayer)});
   for(const [g,pts] of Object.entries(segs))if(pts.length>1)L.polyline(pts,{color:+g?dayColor(+g):css('--ink'),weight:+g?3:2,opacity:.7,dashArray:'4 6',interactive:false}).addTo(tripLayer);
   const done=t.items.filter(i=>i.v).length;
   bn.innerHTML=`<b>${esc(t.name)}</b><span class="mono" style="opacity:.8">${done}/${t.items.length}</span>${useDays?`<select id="tb-day" aria-label="Día" class="tbday"><option value="0">Todos</option>${Array.from({length:N},(_,g)=>`<option value="${g+1}" ${day===g+1?'selected':''}>Día ${g+1}</option>`).join('')}</select>`:''}<button id="tb-x">Salir</button>`;bn.hidden=false;

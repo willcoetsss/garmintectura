@@ -1,4 +1,4 @@
-const V='garmintectura-v5';const T='garmintectura-tiles-v2';
+const V='garmintectura-v6';const T='garmintectura-tiles-v2';
 const SHELL=['./','index.html','manifest.webmanifest','data/obras.json','data/basemap.json','icons/icon-192.png','icons/icon-512.png',
 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js','https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
