@@ -1,0 +1,564 @@
+{
+ "updated": "2026-10-19",
+ "items": [
+  {
+   "d": "2026-11-01",
+   "lat": 50.8593,
+   "lon": 4.3485,
+   "lug": "Bruselas",
+   "src": "Blooloop",
+   "t": "KANAL–Centre Pompidou abre en Bruselas",
+   "tag": "Apertura",
+   "txt": "Un antiguo concesionario Citroën de los años 30 junto al canal se convierte en un gran centro de arte, con proyecto de Atelier Kanal (noAarchitecten, EM2N y Sergison Bates). Apertura prevista para noviembre de 2026.",
+   "url": "https://blooloop.com/best-new-museums-2026/",
+   "obra": {
+    "n": "KANAL–Centre Pompidou",
+    "arq": "Atelier Kanal (noAarchitecten; EM2N; Sergison Bates)",
+    "y0": 2026,
+    "uso": "mus",
+    "usoO": "Concesionario y taller Citroën",
+    "tipo": "Centro de arte",
+    "vis": "ent",
+    "city": "Bruselas",
+    "country": "Bélgica",
+    "dud": "Abre al público en noviembre de 2026."
+   }
+  },
+  {
+   "d": "2026-10-17",
+   "lug": "Shanghái, China",
+   "src": "Dezeen",
+   "t": "Snøhetta termina la Gran Ópera de Shanghái",
+   "tag": "Obra nueva",
+   "txt": "Junto al río Huangpu, el nuevo teatro de los autores de la Ópera de Oslo reúne tres salas para unas 4.200 personas y una gran escalera en espiral que sube a una cubierta pública.",
+   "url": "https://www.dezeen.com/2026/10/17/snohetta-shanghai-grand-opera-house/"
+  },
+  {
+   "d": "2026-10-17",
+   "lat": 48.8235,
+   "lon": 2.2335,
+   "lug": "Boulogne-Billancourt, Francia",
+   "src": "designboom",
+   "t": "Large, de RCR Arquitectes, abre en la Île Seguin",
+   "tag": "Apertura",
+   "txt": "Los Pritzker catalanes, con CALQ, firman un centro de arte contemporáneo de unos 5.000 m² en la antigua isla de Renault; casi la mitad del edificio es de acceso gratuito. Su primera muestra abre el 17 de octubre.",
+   "url": "https://www.designboom.com/architecture/new-art-center-paris-ile-seguin-october-rcr-arquitectes/",
+   "obra": {
+    "n": "Large",
+    "arq": "RCR Arquitectes; CALQ",
+    "y0": 2026,
+    "uso": "mus",
+    "tipo": "Centro de arte contemporáneo",
+    "vis": "ent",
+    "city": "Boulogne-Billancourt",
+    "country": "Francia",
+    "approx": true,
+    "cur": [
+     "Se levanta en la Île Seguin, la antigua isla de la fábrica Renault."
+    ]
+   }
+  },
+  {
+   "d": "2026-10-16",
+   "lug": "Internacional",
+   "src": "ArchDaily",
+   "t": "World Monuments Watch 2027: las amenazas al patrimonio",
+   "tag": "Patrimonio",
+   "txt": "Las candidaturas para la próxima lista señalan los recortes públicos, el clima y la falta de oficios especializados como los grandes riesgos para el patrimonio.",
+   "url": "https://www.archdaily.com/1186995/world-monuments-watch-2027-nominations-point-to-government-austerity-climate-impact-and-skills-shortages-as-main-threats-to-heritage"
+  },
+  {
+   "d": "2026-10-15",
+   "lug": "Rangpur, Bangladés",
+   "src": "Dezeen",
+   "t": "Una fábrica en Bangladés gana el RIBA International Prize",
+   "tag": "Premio",
+   "txt": "La Green Field Factory de Nakshabid Architects, una fábrica de alfombras de siete plantas, recurre a patios, porches y fachada verde de la casa bengalí y suma guardería y consultorio para sus 5.000 trabajadores.",
+   "url": "https://dezeen.com/2026/10/16/green-field-factory-nakshabid-architects-riba-international-prize"
+  },
+  {
+   "d": "2026-10-15",
+   "lat": 51.3191,
+   "lon": -0.1399,
+   "lug": "Coulsdon, Londres",
+   "src": "ArchDaily",
+   "t": "Lion Green Road gana el Stirling 2026",
+   "tag": "Premio",
+   "txt": "Un conjunto de vivienda en Croydon, de Mary Duggan Architects con RUFF Architects, se lleva el mayor premio británico de arquitectura en el 30 aniversario del galardón.",
+   "url": "https://www.archdaily.com/1186944/lion-green-road-by-mary-duggan-architects-and-ruffarchitects-wins-riba-stirling-prize-2026",
+   "obra": {
+    "n": "Lion Green Road",
+    "arq": "Mary Duggan Architects; RUFF Architects",
+    "uso": "viv",
+    "tipo": "Conjunto de vivienda",
+    "vis": "ext",
+    "city": "Coulsdon (Londres)",
+    "country": "Reino Unido",
+    "cur": [
+     "Premio RIBA Stirling 2026."
+    ],
+    "dud": "Año de terminación por confirmar."
+   }
+  },
+  {
+   "d": "2026-10-15",
+   "lug": "Berlín",
+   "src": "ArchDaily",
+   "t": "Sauerbruch Hutton termina un edificio híbrido de madera en Berlín",
+   "tag": "Obra nueva",
+   "txt": "El estudio de la Experimenta de Heilbronn y del Cologne Oval Office completa una estructura mixta de madera, uno de los temas fuertes de la construcción europea actual.",
+   "url": "https://www.archdaily.com/1186880/un-habitat-highlights-housing-initiatives-and-sauerbruch-hutton-completes-timber-hybrid-building-in-berlin-this-weeks-review"
+  },
+  {
+   "d": "2026-10-15",
+   "lat": 50.0755,
+   "lon": 14.4378,
+   "lug": "Praga",
+   "src": "ArchDaily",
+   "t": "OODA abre una manzana de Praga con vivienda social y plaza",
+   "tag": "Obra nueva",
+   "txt": "Un proyecto de uso mixto que hace permeable una manzana cerrada y combina vivienda social con un jardín central público.",
+   "url": "https://www.archdaily.com/1186855/ooda-transforms-a-prague-city-block-into-a-permeable-mixed-use-complex-with-a-lanscaped-central-plaza"
+  },
+  {
+   "d": "2026-10-14",
+   "lug": "Reino Unido",
+   "src": "ArchDaily",
+   "t": "Muere Sir Donald Insall a los 100 años",
+   "tag": "Obituario",
+   "txt": "Referente de la conservación arquitectónica en Inglaterra, dirigió entre otras la restauración del castillo de Windsor tras el incendio de 1992.",
+   "url": "https://www.archdaily.com/1186771/sir-donald-insall-architect-and-figure-in-modern-architectural-conservation-passes-away-at-100"
+  },
+  {
+   "d": "2026-10-13",
+   "lug": "Houston, EE. UU.",
+   "src": "Dezeen",
+   "t": "OMA convertirá una antigua fábrica de café de Houston en escuela de música",
+   "tag": "Rehabilitación",
+   "txt": "La planta Folger de los años 30 acogerá una escuela concertada gratuita de música y artes. Es la segunda colaboración de OMA y Lovett tras POST Houston; apertura prevista en 2027.",
+   "url": "https://www.dezeen.com/2026/10/13/oma-convert-houston-coffee-plant-flama/"
+  },
+  {
+   "d": "2026-10-12",
+   "lat": 41.3234,
+   "lon": 19.8187,
+   "lug": "Tirana, Albania",
+   "src": "Dezeen",
+   "t": "BIG gana el concurso de la Fountain Plaza de Tirana",
+   "tag": "Concurso",
+   "txt": "El edificio mixto, elevado sobre finos pilares en el parque Rinia y cerca de la Pirámide de Tirana, conserva la piscina existente y deja caer el agua desde arriba como una fuente invertida.",
+   "url": "https://www.dezeen.com/2026/10/12/tirana-fountain-tower-big-albania/"
+  },
+  {
+   "d": "2026-10-12",
+   "lat": 45.0703,
+   "lon": 7.6869,
+   "lug": "Turín",
+   "src": "ArchDaily",
+   "t": "Utopian Hours vuelve a Turín con Peter Cook",
+   "tag": "Evento",
+   "txt": "El festival sobre cómo se hacen las ciudades reúne este año al fundador de Archigram, autor de la Kunsthaus de Graz que tienes en el mapa.",
+   "url": "https://www.archdaily.com/1186668/cities-are-mental-weapons-utopian-hours-2026-returns-to-turin-with-sir-peter-cook-and-a-program-on-city-making"
+  },
+  {
+   "d": "2026-10-08",
+   "lat": 51.5236,
+   "lon": -0.1066,
+   "lug": "Londres, Reino Unido",
+   "src": "Dezeen",
+   "t": "La antigua sede de Zaha Hadid será un espacio cultural",
+   "tag": "Patrimonio",
+   "txt": "La escuela victoriana de Clerkenwell donde trabajó su estudio más de 30 años abrirá en noviembre con una muestra de sus escenografías y un simposio por los diez años de su muerte.",
+   "url": "https://www.dezeen.com/2026/10/08/zaha-hadid-foundation-cultural-hub-london/",
+   "obra": {
+    "n": "Antigua sede de Zaha Hadid Architects",
+    "arq": "Edificio escolar victoriano",
+    "uso": "cul",
+    "usoO": "Escuela victoriana; después estudio de Zaha Hadid Architects",
+    "tipo": "Espacio cultural",
+    "est": "Victoriano",
+    "vis": "ent",
+    "city": "Londres",
+    "country": "Reino Unido",
+    "dud": "Abre como espacio cultural en noviembre de 2026; autor del edificio original sin confirmar."
+   }
+  },
+  {
+   "d": "2026-10-07",
+   "lat": 40.7516,
+   "lon": -73.9755,
+   "lug": "Nueva York, EE. UU.",
+   "src": "Dezeen",
+   "t": "El edificio Chrysler se restaurará con 235 millones de dólares",
+   "tag": "Rehabilitación",
+   "txt": "Tishman Speyer, con un nuevo arrendamiento de Cooper Union, restaurará la fachada y la corona art déco de William Van Alen y renovará los interiores, con un espacio común en la planta de las gárgolas.",
+   "url": "https://www.dezeen.com/2026/10/07/chrysler-building-restoration-plan-tishman-speyer/"
+  },
+  {
+   "d": "2026-10-03",
+   "lat": 51.0558,
+   "lon": 3.7194,
+   "lug": "Gante, Bélgica",
+   "src": "ArchDaily",
+   "t": "Design Museum Gent reabre con un ala de ladrillo reciclado",
+   "tag": "Apertura",
+   "txt": "Tras cuatro años de obras, Carmody Groarke y ATAMA unen el museo con un ala nueva de ladrillo hecho con residuos municipales, mientras RE-ST restaura el palacete rococó Hotel de Coninck.",
+   "url": "https://www.archdaily.com/1186376/design-museum-gent-reopens-with-new-wing-by-carmody-groarke-and-atama",
+   "obra": {
+    "n": "Design Museum Gent",
+    "arq": "Carmody Groarke; ATAMA; RE-ST (restauración del Hotel de Coninck)",
+    "y1": 2026,
+    "uso": "mus",
+    "usoO": "Palacete rococó (Hotel de Coninck)",
+    "tipo": "Museo de diseño",
+    "vis": "ent",
+    "city": "Gante",
+    "country": "Bélgica"
+   }
+  },
+  {
+   "d": "2026-07-01",
+   "lat": 46.3683,
+   "lon": 14.1146,
+   "lug": "Bled, Eslovenia",
+   "src": "Blooloop",
+   "t": "Muzej Lah, de David Chipperfield, en Bled",
+   "tag": "Apertura",
+   "txt": "Nuevo museo de arte junto al lago de Bled, previsto para el verano de 2026. Una buena excusa para combinarlo con la Liubliana de Plečnik.",
+   "url": "https://blooloop.com/best-new-museums-2026/",
+   "obra": {
+    "n": "Muzej Lah",
+    "arq": "David Chipperfield Architects",
+    "y0": 2026,
+    "uso": "mus",
+    "tipo": "Museo de arte",
+    "vis": "ent",
+    "city": "Bled",
+    "country": "Eslovenia",
+    "approx": true,
+    "dud": "Ubicación aproximada en Bled."
+   }
+  },
+  {
+   "d": "2026-06-06",
+   "lat": 51.5048,
+   "lon": -0.1752,
+   "lug": "Londres",
+   "src": "designboom",
+   "t": "Pabellón de la Serpentine 2026: LANZA atelier",
+   "tag": "Pabellón",
+   "txt": "El estudio mexicano de Isabel Abascal y Alessandro Arienzo celebra los 25 años del pabellón con una estructura curva de ladrillo en Kensington Gardens.",
+   "url": "https://www.designboom.com/architecture/lanza-atelier-curving-brick-design-2026-serpentine-pavilion-isabel-abascal-alessandro-arienzo/",
+   "obra": {
+    "n": "Pabellón de la Serpentine 2026",
+    "arq": "LANZA atelier (Isabel Abascal; Alessandro Arienzo)",
+    "y0": 2026,
+    "uso": "cul",
+    "tipo": "Pabellón temporal",
+    "est": "Contemporáneo",
+    "vis": "pub",
+    "city": "Londres",
+    "country": "Reino Unido",
+    "dud": "Pabellón temporal: se desmonta al terminar la temporada."
+   }
+  },
+  {
+   "d": "2026-04-16",
+   "lat": 50.4135,
+   "lon": 4.4407,
+   "lug": "Europa",
+   "src": "e-flux",
+   "t": "Premios EU Mies 2026: Charleroi y Liubliana",
+   "tag": "Premio",
+   "txt": "El Palais des Expositions de Charleroi, de AgwA y jan de vylder inge vinck, gana el premio europeo de arquitectura contemporánea. En arquitectura emergente gana el espacio temporal del Teatro Nacional Esloveno de Vidic Grohar Arhitekti. Ambos premian la reutilización.",
+   "url": "https://www.e-flux.com/announcements/6787204/winners-of-the-european-union-prize-for-contemporary-architecture-mies-van-der-rohe-awards-2026",
+   "obra": {
+    "n": "Palais des Expositions de Charleroi",
+    "arq": "AgwA; architecten jan de vylder inge vinck",
+    "uso": "cul",
+    "tipo": "Palacio de exposiciones",
+    "vis": "ent",
+    "city": "Charleroi",
+    "country": "Bélgica",
+    "cur": [
+     "Premio EU Mies van der Rohe 2026."
+    ],
+    "dud": "Año de terminación por confirmar."
+   }
+  },
+  {
+   "d": "2026-04-01",
+   "lat": 51.5419,
+   "lon": -0.0135,
+   "lug": "Londres",
+   "src": "Blooloop",
+   "t": "V&A East Museum abre en el Parque Olímpico",
+   "tag": "Apertura",
+   "txt": "O'Donnell + Tuomey, autores del Saw Swee Hock Centre que tienes en tu lista, firman el nuevo museo del V&A en Stratford, junto al Centro Acuático de Zaha Hadid.",
+   "url": "https://blooloop.com/best-new-museums-2026/",
+   "obra": {
+    "n": "V&A East Museum",
+    "arq": "O'Donnell + Tuomey",
+    "y0": 2026,
+    "uso": "mus",
+    "tipo": "Museo",
+    "vis": "ent",
+    "city": "Londres",
+    "country": "Reino Unido"
+   }
+  },
+  {
+   "d": "2026-03-12",
+   "lug": "Chile",
+   "src": "Metalocus",
+   "t": "Smiljan Radić, Premio Pritzker 2026",
+   "tag": "Premio",
+   "txt": "El arquitecto chileno, autor del Pabellón de la Serpentine de 2014 y del Teatro Regional del Biobío, recibe el mayor premio de arquitectura del mundo.",
+   "url": "https://www.metalocus.es/en/news/smiljan-radic-clarke-new-2026-pritzker-architecture-prize"
+  },
+  {
+   "d": "2026-02-20",
+   "lat": 41.4036,
+   "lon": 2.1744,
+   "lug": "Barcelona",
+   "src": "Vatican News",
+   "t": "La Sagrada Família corona la torre de Jesucristo",
+   "tag": "Obra",
+   "txt": "Con la cruz de la torre central completada, la basílica de Gaudí alcanza su altura máxima y se convierte en la iglesia más alta del mundo.",
+   "url": "https://www.vaticannews.va/en/church/news/2026-02/basilica-sagrada-familia-cross-completed-tower-of-jesus-christ.html",
+   "obra": {
+    "ref": 446
+   }
+  }
+ ],
+ "revistas": [
+  {
+   "n": "ArchDaily",
+   "u": "https://www.archdaily.com/",
+   "d": "El mayor portal de proyectos y noticias, con edición en español."
+  },
+  {
+   "n": "Dezeen",
+   "u": "https://www.dezeen.com/architecture/",
+   "d": "Noticias diarias de arquitectura y diseño."
+  },
+  {
+   "n": "designboom",
+   "u": "https://www.designboom.com/architecture/",
+   "d": "Arquitectura, diseño y arte contemporáneo."
+  },
+  {
+   "n": "Divisare",
+   "u": "https://divisare.com/",
+   "d": "Atlas de proyectos con muy buena fotografía."
+  },
+  {
+   "n": "Metalocus",
+   "u": "https://www.metalocus.es/",
+   "d": "Revista española, crítica y proyectos."
+  },
+  {
+   "n": "Arquitectura Viva",
+   "u": "https://arquitecturaviva.com/",
+   "d": "Arquitectura Viva, AV Monografías y AV Proyectos."
+  },
+  {
+   "n": "El Croquis",
+   "u": "https://elcroquis.es/",
+   "d": "Monografías de referencia sobre estudios."
+  },
+  {
+   "n": "The Architectural Review",
+   "u": "https://www.architectural-review.com/",
+   "d": "Crítica y ensayo desde 1896."
+  },
+  {
+   "n": "Domus",
+   "u": "https://www.domusweb.it/en/architecture.html",
+   "d": "La revista fundada por Gio Ponti."
+  },
+  {
+   "n": "Casabella",
+   "u": "https://casabellaweb.eu/",
+   "d": "Revista italiana de arquitectura."
+  },
+  {
+   "n": "Detail",
+   "u": "https://www.detail.de/de_en/",
+   "d": "Construcción y detalle técnico."
+  },
+  {
+   "n": "Architectural Record",
+   "u": "https://www.architecturalrecord.com/",
+   "d": "Revista estadounidense de referencia."
+  },
+  {
+   "n": "The Architect's Newspaper",
+   "u": "https://www.archpaper.com/",
+   "d": "Actualidad, sobre todo de Norteamérica."
+  },
+  {
+   "n": "Wallpaper*",
+   "u": "https://www.wallpaper.com/architecture",
+   "d": "Arquitectura y diseño con mirada de estilo."
+  },
+  {
+   "n": "a+t",
+   "u": "https://aplust.net/",
+   "d": "Revista española de investigación sobre vivienda y espacio público."
+  },
+  {
+   "n": "Tectónica",
+   "u": "https://tectonica.archi/",
+   "d": "Materiales y sistemas constructivos."
+  }
+ ],
+ "estudios": [
+  {
+   "n": "OMA",
+   "u": "https://www.oma.com/",
+   "c": "Róterdam"
+  },
+  {
+   "n": "BIG",
+   "u": "https://big.dk/",
+   "c": "Copenhague"
+  },
+  {
+   "n": "Herzog & de Meuron",
+   "u": "https://www.herzogdemeuron.com/",
+   "c": "Basilea"
+  },
+  {
+   "n": "SANAA",
+   "u": "https://www.sanaa.co.jp/",
+   "c": "Tokio"
+  },
+  {
+   "n": "Zaha Hadid Architects",
+   "u": "https://www.zaha-hadid.com/",
+   "c": "Londres"
+  },
+  {
+   "n": "Foster + Partners",
+   "u": "https://www.fosterandpartners.com/",
+   "c": "Londres"
+  },
+  {
+   "n": "Renzo Piano Building Workshop",
+   "u": "https://www.rpbw.com/",
+   "c": "Génova y París"
+  },
+  {
+   "n": "David Chipperfield Architects",
+   "u": "https://davidchipperfield.com/",
+   "c": "Londres y Berlín"
+  },
+  {
+   "n": "Snøhetta",
+   "u": "https://www.snohetta.com/",
+   "c": "Oslo"
+  },
+  {
+   "n": "MVRDV",
+   "u": "https://www.mvrdv.com/",
+   "c": "Róterdam"
+  },
+  {
+   "n": "Lacaton & Vassal",
+   "u": "https://www.lacatonvassal.com/",
+   "c": "París"
+  },
+  {
+   "n": "Grafton Architects",
+   "u": "https://www.graftonarchitects.ie/",
+   "c": "Dublín"
+  },
+  {
+   "n": "RCR Arquitectes",
+   "u": "https://www.rcrarquitectes.es/",
+   "c": "Olot"
+  },
+  {
+   "n": "Flores & Prats",
+   "u": "https://www.floresprats.com/",
+   "c": "Barcelona"
+  },
+  {
+   "n": "Mecanoo",
+   "u": "https://www.mecanoo.nl/",
+   "c": "Delft"
+  },
+  {
+   "n": "selgascano",
+   "u": "https://www.selgascano.net/",
+   "c": "Madrid"
+  },
+  {
+   "n": "Nieto Sobejano",
+   "u": "https://www.nietosobejano.com/",
+   "c": "Madrid y Berlín"
+  },
+  {
+   "n": "Ensamble Studio",
+   "u": "https://www.ensamble.info/",
+   "c": "Madrid"
+  },
+  {
+   "n": "Barozzi Veiga",
+   "u": "https://www.barozziveiga.com/",
+   "c": "Barcelona"
+  },
+  {
+   "n": "Harquitectes",
+   "u": "https://www.harquitectes.com/",
+   "c": "Sabadell"
+  },
+  {
+   "n": "Christ & Gantenbein",
+   "u": "https://christgantenbein.com/",
+   "c": "Basilea"
+  },
+  {
+   "n": "Caruso St John",
+   "u": "https://www.carusostjohn.com/",
+   "c": "Londres"
+  },
+  {
+   "n": "Diller Scofidio + Renfro",
+   "u": "https://dsrny.com/",
+   "c": "Nueva York"
+  },
+  {
+   "n": "Kengo Kuma & Associates",
+   "u": "https://kkaa.co.jp/en/",
+   "c": "Tokio"
+  }
+ ],
+ "premios": [
+  {
+   "n": "Premio Pritzker",
+   "u": "https://www.pritzkerprize.com/"
+  },
+  {
+   "n": "Premios EU Mies van der Rohe",
+   "u": "https://www.miesarch.com/"
+  },
+  {
+   "n": "RIBA Stirling Prize",
+   "u": "https://www.riba.org/explore/awards/uk-awards/stirling-prize/"
+  },
+  {
+   "n": "Fundació Mies van der Rohe",
+   "u": "https://miesbcn.com/"
+  },
+  {
+   "n": "Bienal de Venecia (Arquitectura)",
+   "u": "https://www.labiennale.org/en/architecture"
+  },
+  {
+   "n": "Docomomo International",
+   "u": "https://docomomo.com/"
+  }
+ ]
+}
