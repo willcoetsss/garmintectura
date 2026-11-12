@@ -1,7 +1,7 @@
 {
  "name": "Garmintectura",
  "short_name": "Garmintectura",
- "description": "Atlas personal de arquitectura europea con viajes y checklist.",
+ "description": "Atlas personal de arquitectura del mundo, con fichas, viajes y rutas.",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
